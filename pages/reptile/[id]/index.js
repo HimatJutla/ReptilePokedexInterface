@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import fetchSelectedReptile from '../../../store/reptile-actions';
 
 export default function IndividualReptile({}) {
 

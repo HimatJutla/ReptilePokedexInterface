@@ -32,3 +32,11 @@ export const fetchSelectedReptile = (reptileId) => {
         }
     }
 };
+
+export const populateAllReptilesList = (allReptiles) => {
+    return async (dispatch) => {
+        dispatch(reptileActions.populateAllReptiles({
+            allReptiles: allReptiles
+        }));
+    }
+}
