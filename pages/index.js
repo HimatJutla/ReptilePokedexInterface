@@ -2,8 +2,16 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import ReptileListView from '../components/reptileListView/ReptileListView';
 import EmptyReptileState from '../components/emptyState/emptyState';
+import { useEffect } from 'react';
+import populateAllReptilesList from '../store/reptile-actions';
 
 export default function Home({ allReptiles }) {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(populateAllReptilesList(allReptiles));
+  }, [dispatch]);
 
   return (
     <div className={styles.container}>
